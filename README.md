@@ -48,6 +48,24 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Given more time, what would you suggest for improving the performance of this app?
 
+1. Thinking ahead, I created a temporary caching layer within the app.js file.  Though it could be improved upon with a Context API pattern or middleware storage - maybe?
+2. Data could be retrieved with something like GraphQL to reduce over-fetching.
+3. Pagination or Infinite scrolling adds to reduce initial pokemon load.
+4. Debouncing Search Input - the keystroke trigger updates the state and therefore causes the resulting list to update.
+
 - Is there anything you would consider doing if we were to go live with this app?
 
+1. I would definitely consider typescript for this type of project.  I am trusting there aren't any edge cases in handling the data right now and that is a recipe for disaster.
+2. I would add jest unit testing to ensure data is as expected outside of typescript types.
+3. Adding Prettier and Eslint along with vscode settings would be helpful for keeping the app looking nice
+4. There were a handful of warnings/errors at build time, this could be due to node version issues or outdated packages.  Would suggest fixing those.
+5. Accessibility and SEO could be improved.  I worked on a handful of areas, being semantic and adding what I could, but adding more robust landmarks would be best.
+6. Favicons, meta data are missing off the app
+7. Little friendly design and UI, saw there were sprites in the API!
+
 - What was the most challenging aspect of this work for you (if at all)?
+1. The styling choices in the demonstration were a bit off and gave me hesitation to code pixel perfect.  For example the list items and line heights in the pokemon details indicated an alignment that won't look as nice as bulbasaur. I would typically vocalize this to the team before starting a ticket.  I ended up following the designs, but I think there were cleaner ways to implement some of the alignment if flexibility was there.
+2. I have never played or watched Pokemon -- I got sucked into Cowboy Bebop over Pokemon, hopefully that redeems the start of this comment.  Api was cool though!
+
+Time Start: 7:30
+Time Finish: 9:30 (Pokeball anination took ~30 minutes)
