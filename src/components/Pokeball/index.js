@@ -9,8 +9,6 @@ const Pokeball = ({ pokemonDetails }) => {
 
   const resetAnimation = useCallback(() => {
     if (pokeballRef.current) {
-      // Debug: log to check if the ref is correctly attached
-      console.log("Resetting animation");
       pokeballRef.current.classList.remove("animate");
       void pokeballRef.current.offsetWidth; // Force reflow
       pokeballRef.current.classList.add("animate");
